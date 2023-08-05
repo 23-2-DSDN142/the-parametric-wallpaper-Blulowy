@@ -88,5 +88,20 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   ellipse(mcenter, mcenter, pwidh*size, phigh*size);
 
+  /* lines */
+  strokeWeight(5);
+  stroke('#7FA4DA');
+  line(100, -10, 0, -70);
+  line(0,-70,-100,-10);
+  line(100, 10, 0, 70);
+  line(0, 70,-100, 10);
+  
+  strokeWeight(3.5);
+  stroke('#7390CD')
+  line(0, -80, 35, -60);
+  line(-35, -60, 0, -80);
+  line(0, 80, 35, 60);
+  line(-35, 60, 0, 80);
+
 }
 
