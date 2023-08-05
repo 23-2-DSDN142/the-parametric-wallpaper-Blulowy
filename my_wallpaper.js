@@ -2,7 +2,7 @@
 let scenter = 100;
 let mcenter = 200;
 let pwidh = 1;
-let phigh = 2;
+let phigh = 2.5;
 let size = 12;
 //my colour parametrs are at the start of function 'my symbol'
 
@@ -73,7 +73,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   ellipse(scenter, scenter, pwidh*size, phigh*size);
 
-  
+
      
   /* Moon-eye symbol */
   fill(moonColor);
