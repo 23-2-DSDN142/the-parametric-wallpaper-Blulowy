@@ -80,7 +80,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   ellipse(mcenter+mcenter, mcenter+mcenter, 7.5*size, 7*size); 
 
-  fill('#8FC0ED');
+  fill(bgColor);
   noStroke();
   ellipse(mcenter-20, mcenter, 7.5*size, 6.5*size); // center-20 
 
