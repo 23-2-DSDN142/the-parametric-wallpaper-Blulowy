@@ -1,9 +1,10 @@
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-let center = 10;
+let center = 70;
 let pwidh = 1;
 let phigh = 2;
+let size = 9;
 //my colour parametrs are at the start of function 'my symbol'
 
 
@@ -37,46 +38,52 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   push();
   translate(center,center)
   rotate(45);
-  triangle(-1.5, -3, 1, -5.5, 2, -3.5); //up
-  triangle(-2, 3, -1, 5.5, 1.5, 3); //down
+  triangle(-1.5*size, -3*size, 1*size, -5.5*size, 2*size, -3.5*size); //up
+  triangle(-2*size, 3*size, -1*size, 5.5*size, 1.5*size, 3*size); //down
   pop();
 
   push();
   translate(center,center)
   rotate(-65);
-  triangle(-1.5, -3, 1, -5.5, 2, -3.5); //up
-  triangle(-2, 3, -1, 5.5, 1.5, 3); //down
+  triangle(-1.5*size, -3*size, 1*size, -5.5*size, 2*size, -3.5*size); //up
+  triangle(-2*size, 3*size, -1*size, 5.5*size, 1.5*size, 3*size); //down
   pop();
 
-  fill(sunColor);
-  noStroke();
-  triangle(8, 6.5, center, 4.5, 12, 6.5); //up
-  triangle(8, 13.5, center, 15.5, 12, 13.5); //down
+  //fill(sunColor);
+  //noStroke();
+  //triangle(8, 6.5, center, 4.5, 12, 6.5); //up
+  //triangle(8, 13.5, center, 15.5, 12, 13.5); //down
+
+  push();
+  translate(center,center)
+  triangle(-2*size, -3.5*size, 0*size, -5.5*size, 2*size, -3.5*size); //up
+  triangle(-2*size, 3.5*size, 0*size, 5.5*size, 2*size, 3.5*size); //down
+  pop()
 
   fill(bgColor);
   noStroke();
-  circle(center, center, 8);
+  circle(center, center, 8*size);
 
 
   fill(sunColor);
   noStroke();
-  ellipse(center, center, 7.5, 7); 
+  ellipse(center, center, 7.5*size, 7*size); 
   fill(bgColor);
   noStroke();
-  ellipse(center, center, pwidh, phigh);
+  ellipse(center, center, pwidh*size, phigh*size);
 
   /* Moon-eye symbol */
   fill(moonColor);
   noStroke();
-  ellipse(center+10, center+10, 7.5, 7); 
+  ellipse(center+center, center+center, 7.5*size, 7*size); 
 
   fill('#8FC0ED');
   noStroke();
-  ellipse(center+8, center+10, 7.5, 6.5); // center-20 
+  ellipse(center+(center-0.2*center), center+center, 7.5*size, 6.5*size); // center-20 
 
   fill(moonColor);
   noStroke();
-  ellipse(center+10, center+10, pwidh, phigh);
+  ellipse(center+center, center+center, pwidh*size, phigh*size);
 
 }
 
