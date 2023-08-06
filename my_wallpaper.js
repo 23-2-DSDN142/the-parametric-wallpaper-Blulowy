@@ -34,6 +34,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let moonColor = color('#3331f2');
   let starColor = color('#53AD33');
   let fullMoon = color('#8C100E');
+  let shadow = color(0);
   
   let bgColor = color('#8FC0ED');
   let bgNight = color('#455FA2');
@@ -43,7 +44,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
  
   if(mcenter == scenter){
-    bgNight = sunColor;
+    shadow = sunColor;
+  }
+  else {
+    shadow = bgNight;
   }
 
   /*
@@ -107,11 +111,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(moonColor);
   stroke(nigStr);
   strokeWeight(strS);
-  ellipse(mcenter, mcenter, 7.5*size, 7*size); 
+  arc(mcenter, mcenter, 7.5*size, 7*size, 240, 110); 
 
-  fill(bgNight);
+  fill(shadow);
   noStroke();
-  ellipse(mcenter-20, mcenter, 7.5*size, 6.5*size);  
+  arc(mcenter-20, mcenter, 7.5*size, 6.5*size, 265, 450);  
   
   stroke(nigStr);
   strokeWeight(strS);
