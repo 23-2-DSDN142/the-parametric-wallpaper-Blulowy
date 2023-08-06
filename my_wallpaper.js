@@ -1,10 +1,10 @@
 //your parameter variables go here!
 let scenter = 100;
 let mcenter = 0;
-let pwidh = 1;
-let phigh = 2.5;
+let pwidh = 0.2;
+let phigh = 2.8;
 let size = 12;
-let strS = 1.5;
+let strS = 2.5;
 //my colour parametrs are at the start of function 'my symbol'
 
 
@@ -28,16 +28,25 @@ function wallpaper_background() {
 
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
   //my parameters for colours
-  //let sunColor = color('#E37F1B');
-  let sunColor = color('	#fa7e1e');
-  //let moonColor = color('#1A1697')
-  let bgNight = color('#455FA2');
+  let sunColor = color('#fa7e1e');
   let moonColor = color('#3331f2');
+  let starColor = color('#53AD33');
+  let fullMoon = color('#8C100E');
+  
   let bgColor = color('#8FC0ED');
-  let strCol = color('#7FA4DA');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
   let nigStr = color('#28307A')
   
+  while(pwidh <= phigh - 2){
+       pwidh = pwidh + 0.1;
+  }
+  if(mcenter == scenter){
+    bgNight = sunColor;
+  }
 
   /*
   * night background
@@ -54,7 +63,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   * Sun-eye symbol 
   */
   fill(sunColor);
-  //noStroke();
   stroke(strCol);
   strokeWeight(strS);
 
@@ -72,11 +80,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   triangle(-2*size, 3*size, -1*size, 5.5*size, 1.5*size, 3*size); //down
   pop();
 
-  //fill(sunColor);
-  //noStroke();
-  //triangle(8, 6.5, center, 4.5, 12, 6.5); //up
-  //triangle(8, 13.5, center, 15.5, 12, 13.5); //down
-
   push();
   translate(scenter,scenter)
   triangle(-2*size, -3.5*size, 0*size, -5.5*size, 2*size, -3.5*size); //up
@@ -89,15 +92,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
   fill(sunColor);
-  //noStroke();
   stroke(strCol);
   strokeWeight(strS);
   ellipse(scenter, scenter, 7.5*size, 7*size); 
 
 
   fill(bgColor);
-  //noStroke();
-  
   ellipse(scenter, scenter, pwidh*size, phigh*size);
 
 
@@ -107,14 +107,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   * Moon-eye symbol 
   */
   fill(moonColor);
-  //noStroke();
   stroke(nigStr);
   strokeWeight(strS);
   ellipse(mcenter, mcenter, 7.5*size, 7*size); 
 
   fill(bgNight);
   noStroke();
-  ellipse(mcenter-20, mcenter, 7.5*size, 6.5*size); // center-20 
+  ellipse(mcenter-20, mcenter, 7.5*size, 6.5*size);  
   
   stroke(nigStr);
   strokeWeight(strS);
@@ -122,12 +121,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   arc(mcenter-20, mcenter, 7.5*size, 6.5*size, 270, 90)
 
   fill(moonColor);
-  //noStroke();
   stroke(nigStr);
   ellipse(mcenter, mcenter, pwidh*size, phigh*size);
 
   
-
 
 
   /* 
@@ -147,33 +144,20 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0, 80, 35, 60);
   line(-35, 60, 0, 80);
 
-  //stroke('#7FA4DA');
   line(-92, 0, -77, 10);
   line(-92, 0, -77, -10);
   line(-109, 0, -124, 10);
   line(-109, 0, -124, -10);
 
-
-  //stroke('#7390CD')
-  //fill('#7390CD');
-  stroke(nigStr);
-  fill(nigStr);
+  /* circle */
+  stroke(fullMoon);
+  fill(fullMoon);
   circle(-100, 0, 5, 5);
 
-
-
-
-  /* eye */
-  stroke('#7FA4DA');
+  /* star - eye */
+  stroke(starColor);
   strokeWeight(3)
   noFill();
-
-  /*arc(0, 103, 20, 15, 0, 180);
-  arc(0, 101, 20, 20, 180, 0);
-  circle(0, 101, 1);*/
-
-  /*ellipse(0, 100, 22, 20)
-  line(0, 101, 0, 99)*/
 
   line(0, 92, 4, 97)
   line(0, 92, -4, 97)
@@ -188,8 +172,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   strokeWeight(2)
   line(0, 100, 0, 102)
-
-   
-
 }
 
