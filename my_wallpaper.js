@@ -44,7 +44,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let starStr = color('#70b68d');
   let strMon = color('#623f66');
   
- 
+ // If statment too check if sun and moon form eclipse 
   if(mcenter == scenter){
     shadow = sunColor;
   }
@@ -66,6 +66,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   /* 
   * Sun-eye symbol 
   */
+
+  // sun rays 
   fill(sunColor);
   stroke(strCol);
   strokeWeight(strS);
@@ -94,13 +96,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   circle(scenter, scenter, 8*size);
 
-
+  // sun base 
   fill(sunColor);
   stroke(strCol);
   strokeWeight(strS);
   ellipse(scenter, scenter, 7.5*size, 7*size); 
 
-
+  // pupil
   fill(bgColor);
   ellipse(scenter, scenter, pwidh*size, phigh*size);
 
@@ -110,11 +112,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   /* 
   * Moon-eye symbol 
   */
+  // Moon base
   fill(moonColor);
   stroke(nigStr);
   strokeWeight(strS);
   arc(mcenter, mcenter, 7.5*size, 7*size, 240, 110); 
 
+  // Cut for croscent 
   fill(shadow);
   noStroke();
   arc(mcenter-20, mcenter, 7.5*size, 6.5*size, 265, 450);  
@@ -124,6 +128,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noFill();
   arc(mcenter-20, mcenter, 7.5*size, 6.5*size, 270, 90)
 
+  // pupil
   fill(moonColor);
   stroke(nigStr);
   ellipse(mcenter, mcenter, pwidh*size, phigh*size);
@@ -134,6 +139,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   /* 
   * lines 
   */
+   // devider for night and day
   strokeWeight(5);
   stroke('#7FA4DA');
   line(100, -10, 0, -70);
@@ -141,21 +147,22 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(100, 10, 0, 70);
   line(0, 70,-100, 10);
   
+  // lines at the day part 
   strokeWeight(3.5);
-  //stroke('#7390CD')
   stroke(starStr)
   line(0, -80, 35, -60);
   line(-35, -60, 0, -80);
   line(0, 80, 35, 60);
   line(-35, 60, 0, 80);
 
+  // lines at the night part
   stroke(strMon)
   line(-92, 0, -77, 10);
   line(-92, 0, -77, -10);
   line(-109, 0, -124, 10);
   line(-109, 0, -124, -10);
 
-  /* circle */
+  /* small circle */
   stroke(fullMoon);
   fill(fullMoon);
   circle(-100, 0, 5, 5);
@@ -175,7 +182,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(-12,99, -7, 104)
   line(-7, 104, -9, 110)
   line(-9, 110, 0, 106)
-  
+  //pupil
   strokeWeight(2)
   line(0, 100, 0, 102)
 }
