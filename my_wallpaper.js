@@ -1,8 +1,8 @@
 //your parameter variables go here!
 let scenter = 100;
 let mcenter = 0;
-let pwidh = 0.2;
-let phigh = 2.8;
+let pwidh = 0.8;
+let phigh = 3.2;
 let size = 12;
 let strS = 2.5;
 //my colour parametrs are at the start of function 'my symbol'
@@ -41,9 +41,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let strCol = color('#E56A14');
   let nigStr = color('#28307A')
   
-  while(pwidh <= phigh - 2){
-       pwidh = pwidh + 0.1;
-  }
+ 
   if(mcenter == scenter){
     bgNight = sunColor;
   }
@@ -138,12 +136,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0, 70,-100, 10);
   
   strokeWeight(3.5);
-  stroke('#7390CD')
+  //stroke('#7390CD')
+  stroke('#70b68d')
   line(0, -80, 35, -60);
   line(-35, -60, 0, -80);
   line(0, 80, 35, 60);
   line(-35, 60, 0, 80);
 
+  stroke('#623f66')
   line(-92, 0, -77, 10);
   line(-92, 0, -77, -10);
   line(-109, 0, -124, 10);
