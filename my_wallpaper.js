@@ -10,7 +10,7 @@ let strS = 2.5;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -40,7 +40,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let bgNight = color('#455FA2');
 
   let strCol = color('#E56A14');
-  let nigStr = color('#28307A')
+  let nigStr = color('#28307A');
+  let starStr = color('#70b68d');
+  let strMon = color('#623f66');
   
  
   if(mcenter == scenter){
@@ -141,13 +143,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   strokeWeight(3.5);
   //stroke('#7390CD')
-  stroke('#70b68d')
+  stroke(starStr)
   line(0, -80, 35, -60);
   line(-35, -60, 0, -80);
   line(0, 80, 35, 60);
   line(-35, 60, 0, 80);
 
-  stroke('#623f66')
+  stroke(strMon)
   line(-92, 0, -77, 10);
   line(-92, 0, -77, -10);
   line(-109, 0, -124, 10);

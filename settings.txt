@@ -9,37 +9,214 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.8;
+let phigh = 3.2;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#53AD33');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#70b68d');
+  let strMon = color('#623f66');
 
 /////////////////////////////////
 
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.2;
+let phigh = 4;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#53AD33');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#DD3400');
+  let nigStr = color('#28307A');
+  let starStr = color('#70b68d');
+  let strMon = color('#623f66');
+
+/////////////////////////////
+
+Wallpaper 3:
+
+//your parameter variables go here!
+let scenter = 100;
+let mcenter = 100;
+let pwidh = 1;
+let phigh = 3;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#53AD33');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#70b68d');
+  let strMon = color('#623f66');
+
+  //////////////////////////////
+
+  Wallpaper 4:
+
+  //your parameter variables go here!
+let scenter = 0;
+let mcenter = 0;
+let pwidh = 0.5;
+let phigh = 2;
+let size = 10;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#455FA2');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#455FA2');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#70b68d');
+  let strMon = color('#623f66');
+
+  //////////////////////////
+
+  Wallpaper 5:
+
+//your parameter variables go here!
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.5;
+let phigh = 4.5;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -47,7 +224,231 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 0;
 }
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#31cd3c');
+  let moonColor = color('#8C100E');
+  let starColor = color('#fa7e1e');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#0f9e25');
+  let nigStr = color('#7b0533');
+  let starStr = color('#baa599');
+  let strMon = color('#623f66');
+
+////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.5;
+let phigh = 4.5;
+let size = 12;
+let strS = 0;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#fa7e1e');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#0f9e25');
+  let nigStr = color('#7b0533');
+  let starStr = color('#baa599');
+  let strMon = color('#623f66');
+
+///////////////////////////
+
+Wallpaper 7:
+
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 2;
+let phigh = 2.5;
+let size = 13;
+let strS = 4;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#fa7e1e');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#baa599');
+  let strMon = color('#623f66');
+
+  ///////////////////////////////////////////
+
+  Wallpaper 8:
+
+//your parameter variables go here!
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.8;
+let phigh = 3.2;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background(0); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#53AD33');
+  let fullMoon = color('#8C100E');
+  let shadow = color(0);
+  
+  let bgColor = color(0);
+  let bgNight = color(255);
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#083F06');
+  let strMon = color('#FF7272');
+
+  ////////////////////////////////////////
+
+  Wallpaper 9:
+
+  //your parameter variables go here!
+let scenter = 100;
+let mcenter = 0;
+let pwidh = 0.8;
+let phigh = 3.2;
+let size = 12;
+let strS = 2.5;
+//my colour parametrs are at the start of function 'my symbol'
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  colorMode(HSB);
+  angleMode(DEGREES)
+  background('#8FC0ED'); 
+}
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  //my parameters for colours
+  let sunColor = color('#fa7e1e');
+  let moonColor = color('#3331f2');
+  let starColor = color('#28307A');
+  let fullMoon = color('#8FC0ED');
+  let shadow = color(0);
+  
+  let bgColor = color('#8FC0ED');
+  let bgNight = color('#455FA2');
+
+  let strCol = color('#E56A14');
+  let nigStr = color('#28307A');
+  let starStr = color('#455FA2');
+  let strMon = color('#28307A');
