@@ -1,6 +1,6 @@
 //your parameter variables go here!
 let scenter = 100;
-let mcenter = 200;
+let mcenter = 0;
 let pwidh = 1;
 let phigh = 2.5;
 let size = 12;
@@ -30,20 +30,25 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   //my parameters for colours
   //let sunColor = color('#E37F1B');
-  let sunColor = color('#fa7e1e');
+  let sunColor = color('	#fa7e1e');
   //let moonColor = color('#1A1697')
   let bgNight = color('#455FA2');
-  let moonColor = color('#212C91');
+  let moonColor = color('#3331f2');
   let bgColor = color('#8FC0ED');
   let strCol = color('#7FA4DA');
+  let nigStr = color('#28307A')
+  
+
+  /*
+  * night background
+  */
+  noStroke();
+  fill(bgNight);
+  triangle(110, 0, 0, 70, 0, -70);
+  triangle(-110, 0, 0, 70, 0, -70); 
   
   
-  //noStroke();
-  //fill(bgNight);
-  //noFill()
- // triangle(110, 0, 0, 70, 0, -70);
-  //triangle(-110, 0, 0, 70, 0, -70);
-  
+
 
   /* 
   * Sun-eye symbol 
@@ -92,7 +97,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   fill(bgColor);
   //noStroke();
+  
   ellipse(scenter, scenter, pwidh*size, phigh*size);
+
 
 
      
@@ -101,22 +108,22 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   */
   fill(moonColor);
   //noStroke();
-  stroke(strCol);
+  stroke(nigStr);
   strokeWeight(strS);
-  ellipse(mcenter+mcenter, mcenter+mcenter, 7.5*size, 7*size); 
+  ellipse(mcenter, mcenter, 7.5*size, 7*size); 
 
-  fill(bgColor);
+  fill(bgNight);
   noStroke();
   ellipse(mcenter-20, mcenter, 7.5*size, 6.5*size); // center-20 
   
-  stroke(strCol);
+  stroke(nigStr);
   strokeWeight(strS);
   noFill();
   arc(mcenter-20, mcenter, 7.5*size, 6.5*size, 270, 90)
 
   fill(moonColor);
   //noStroke();
-  stroke(strCol);
+  stroke(nigStr);
   ellipse(mcenter, mcenter, pwidh*size, phigh*size);
 
   
@@ -140,24 +147,47 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0, 80, 35, 60);
   line(-35, 60, 0, 80);
 
-  stroke('#7FA4DA');
-  line(92, 0, 77, 10);
-  line(92, 0, 77, -10);
-  line(109, 0, 124, 10);
-  line(109, 0, 124, -10);
-  stroke('#7390CD')
-  fill('#7390CD');
-  circle(100, 0, 5, 5);
+  //stroke('#7FA4DA');
+  line(-92, 0, -77, 10);
+  line(-92, 0, -77, -10);
+  line(-109, 0, -124, 10);
+  line(-109, 0, -124, -10);
+
+
+  //stroke('#7390CD')
+  //fill('#7390CD');
+  stroke(nigStr);
+  fill(nigStr);
+  circle(-100, 0, 5, 5);
+
+
+
 
   /* eye */
   stroke('#7FA4DA');
+  strokeWeight(3)
   noFill();
+
   /*arc(0, 103, 20, 15, 0, 180);
   arc(0, 101, 20, 20, 180, 0);
   circle(0, 101, 1);*/
 
-  ellipse(0, 100, 22, 20)
-  line(0, 101, 0, 99)
+  /*ellipse(0, 100, 22, 20)
+  line(0, 101, 0, 99)*/
+
+  line(0, 92, 4, 97)
+  line(0, 92, -4, 97)
+  line(4, 97, 12, 99)
+  line(12,99, 7, 104)
+  line(7, 104, 9, 110)
+  line(9, 110, 0, 106)
+  line(-4, 97, -12, 99)
+  line(-12,99, -7, 104)
+  line(-7, 104, -9, 110)
+  line(-9, 110, 0, 106)
+  
+  strokeWeight(2)
+  line(0, 100, 0, 102)
 
    
 
